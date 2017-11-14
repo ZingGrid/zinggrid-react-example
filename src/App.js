@@ -6,6 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      theme: 'default',
       data: [
         [
           {
@@ -34,8 +35,6 @@ class App extends Component {
       ],
       changedData: [],
     }
-
-    this.change = this.change.bind(this);
   }
 
   componentDidMount() {
@@ -67,7 +66,15 @@ class App extends Component {
     })
   }
 
-  change() {
+  updateGridTheme = (e) => {
+    let newThemeValue = e.target.value;
+
+    this.setState({
+      theme: newThemeValue
+    });
+  }
+
+  updateGridData = () => {
     let randomizeDataIndex = Math.floor(Math.random() * 2);
 
     this.setState({
@@ -78,8 +85,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <button onClick={this.change}>Data Change</button>
+        <select onChange={this.updateGridTheme}>
+          <option value="default">Default</option>
+          <option value="android">Android</option>
+          <option value="ios">IOS</option>
+        </select>
+        <button onClick={this.updateGridData}>Data Change</button>
         <zing-grid
+          theme={this.state.theme}
           caption="ZingGrid React"
           pager
           pageSize="5"
