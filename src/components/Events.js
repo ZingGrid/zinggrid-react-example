@@ -4,6 +4,7 @@ class Events extends Component {
     constructor(props) {
         super(props);
         this.grid; this.eventLog; this.eventText = "";
+
     }
     render() {
       return (
@@ -47,4 +48,6 @@ class Events extends Component {
           this.eventLog.innerHTML = this.eventText;
         }
   }
+
+    
 export default Events;

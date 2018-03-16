@@ -36,6 +36,18 @@ class DataChange extends Component {
         </div>   
       )
     }
+
+    componentDidMount() {
+        let events = ['data:cellchange'];
+        for (var i = 0; i < events.length; i++) {
+            this.grid.addEventListener(events[i], this.handleEvent.bind(this));
+        }
+       
+    }
+
+    handleEvent = (event) => { // changes to grid data will change data store
+        this.setState({ datastore: JSON.stringify(this.grid.data) });
+    }
   
     changeData() {
         //console.log(this.grid.data = '[[5,6,8]]');
