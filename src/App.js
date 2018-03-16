@@ -8,18 +8,19 @@ import { Switch, Route, Link } from 'react-router-dom'
 
 class App extends Component {
   render() {
+    // TODO: create Methods and Ajax components
+    // TODO: fix style of components + nav (show active-tab)
     return (
       <div className="App">
-        <ul>
-          <li>
+        <nav>
             <Link to="/readonly">Read-Only</Link>
             <Link to="/datachange">Two-Way Binding</Link>
             <Link to="/events">Events</Link>
-          </li>
-        </ul>
-      <Route path='/readonly' component={ReadOnly}/>
-      <Route path='/datachange' component={DataChange}/>
-      <Route path='/events' component={Events}/>
+        </nav>
+        
+        <Route path='/readonly' component={ReadOnly}/>
+        <Route path='/datachange' component={DataChange}/>
+        <Route path='/events' component={Events}/>
   
       </div>
     );

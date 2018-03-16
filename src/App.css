@@ -48,3 +48,37 @@
   word-wrap: break-word;
   /* IE */
 }
+
+nav {
+  margin-bottom: 25px;
+}
+
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+  font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+  font-weight: 400;
+  letter-spacing: .5px;
+  font-size: 15px;
+  margin-right: 5px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: white;
+  background-color: #607D8B;
+}
+nav a.active {
+  color: #039be5;
+}
+
+nav a.active-link {
+    background:#607D8B;
+    color: white;
+
+}

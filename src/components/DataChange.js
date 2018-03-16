@@ -23,15 +23,15 @@ class DataChange extends Component {
       return ( 
         <div>
           <zing-grid ref={(grid) => { this.grid = grid }} caption={this.state.cText} data={this.state.datastore} editor pager={this.state.pager}></zing-grid>
-          <br />
+          <br/>
           <h3>Stored Data</h3>
           <textarea name="ds" cols="50" rows="8" value={this.state.datastore} onChange={this.textareaChange}></textarea>
-          <br /><br />
+          <br/><br/>
   
           <input type="checkbox" checked={this.state.pager} onChange={this.pagerChange} />
   
           <button id="cdBtn" onClick={this.changeData}>Change Data</button>
-          <input ref={(input) => { this.cInput = input }} type="text" placeholder="Caption" value={this.state.cText} />
+          <input ref={(input) => { this.cInput = input }} type="text" placeholder="Caption" value={this.state.cText}/>
           <button onClick={this.captionChange}>Set Caption</button>
         </div>   
       )
@@ -50,7 +50,6 @@ class DataChange extends Component {
     }
   
     changeData() {
-        //console.log(this.grid.data = '[[5,6,8]]');
      if (this.state.selected == 0) {
         this.setState({ datastore: `[
           { "breed": "Chow Chow", "name": "Butter"},

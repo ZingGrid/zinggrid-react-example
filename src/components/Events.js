@@ -18,7 +18,6 @@ class Events extends Component {
     }
 
     componentDidMount() {
-        console.log('here');
         this.grid.data = `[
             {"name": "Kevin", "age": "22"},
             {"name": "Joe", "age": "40"},
@@ -27,6 +26,7 @@ class Events extends Component {
             {"name": "Ron", "age": "30"},
             {"name": "Jane", "age": "31"}
           ]`;
+          
         let events = ['grid:ready', 'cell:click', 'header:click', 'grid:pagechange'];
         for (var i = 0; i < events.length; i++) {
             this.grid.addEventListener(events[i], this.handleEvent.bind(this));
