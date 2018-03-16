@@ -1,35 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ReadOnly from './components/ReadOnly';
+import DataChange from './components/DataChange';
+import Events from './components/Events';
 
-class ReadOnly extends Component {
-  render() {
-    return (
-      <zing-grid data={this.props.datastore}></zing-grid>
-    )
-  }
-}
-
-class DataChange extends Component {
-  render() {
-    return ( 
-      <div>
-        <zing-grid editor></zing-grid>
-        <br />
-
-        <h3>Stored Data</h3>
-        <textarea name="ds" cols="50" rows="8"></textarea>
-        <br /><br />
-
-        <input type="checkbox" checked="{{pagerOn::change}}" />
-
-        <button id="cdBtn">Change Data</button>
-        <input id="cInput" type="text" placeholder="Caption" />
-        <button>Set Caption</button>
-      </div>   
-    )
-  }
-}
 
 class App extends Component {
   constructor(props) {
@@ -129,7 +104,8 @@ class App extends Component {
         >
         </zing-grid>
         <ReadOnly datastore="[[1,2,3], [4,5,6]]" />
-        <DataChange />
+        <DataChange/>
+        <Events/>
       </div>
     );
   }
