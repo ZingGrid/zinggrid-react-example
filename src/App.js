@@ -3,19 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 import ReadOnly from './components/ReadOnly';
 import DataChange from './components/DataChange';
+import Ajax from './components/Ajax';
 import Methods from './components/Methods';
 import Events from './components/Events';
-import { Switch, Route, Link } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom';
 
 class App extends Component {
   render() {
-    // TODO: create Methods and Ajax components
-    // TODO: fix style of components + nav (show active-tab)
     return (
       <div className="App">
         <nav>
             <Link to="/readonly">Read-Only</Link>
             <Link to="/datachange">Two-Way Binding</Link>
+            <Link to="/ajax">Ajax</Link>
             <Link to="/methods">Methods</Link>
             <Link to="/events">Events</Link>
         </nav>
@@ -23,6 +23,7 @@ class App extends Component {
         <Route path='/' component={ReadOnly}/>
         <Route path='/readonly' component={ReadOnly}/>
         <Route path='/datachange' component={DataChange}/>
+        <Route path='/ajax' component={Ajax}/>
         <Route path='/methods' component={Methods}/>
         <Route path='/events' component={Events}/>
   

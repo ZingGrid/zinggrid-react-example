@@ -1,0 +1,13 @@
+{ 
+    "shows": [
+        { "title": "Game of Thrones", "genre": "Fantasy, Serial drama", "seasons": 7 },
+        { "title": "Black Mirror", "genre": "Sci-Fi, Psychological thriller", "seasons": 4 },
+        { "title": "Rick and Morty", "genre": "Animated sitcom, Sci-Fi", "seasons": 3 },
+        { "title": "Westworld", "genre": "Sci-Fi, Drama", "seasons": 1},
+        { "title": "The Office", "genre": "Sitcom", "seasons": 9 },
+        { "title": "Stranger Things", "genre": "Sci-Fi, Supernatural", "seasons": 2 },
+        { "title": "American Horror Story", "genre": "Horror, Drama", "seasons": 7 },
+        { "title": "Scrubs", "genre": "Sitcom, Comedy-drama", "seasons": 9 },
+        { "title": "How I Met Your Mother", "genre": "Sitcom, Romantic Comedy", "seasons": 9 }
+    ]
+}
