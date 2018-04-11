@@ -27,8 +27,8 @@ class DataChange extends Component {
           <h3>Stored Data</h3>
           <textarea name="ds" cols="50" rows="8" value={this.state.datastore} onChange={this.textareaChange}></textarea>
           <br/><br/>
-  
-          <input type="checkbox" checked={this.state.pager} onChange={this.pagerChange} />
+          <label htmlFor="pagerBox">Pager</label>
+          <input id="pagerBox" type="checkbox" checked={this.state.pager} onChange={this.pagerChange} />
   
           <button id="cdBtn" onClick={this.changeData}>Change Data</button>
           <input ref={(input) => { this.cInput = input }} type="text" placeholder="Caption" value={this.state.cText}/>

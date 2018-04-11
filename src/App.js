@@ -20,7 +20,7 @@ class App extends Component {
             <Link to="/events">Events</Link>
         </nav>
         
-        <Route path='/' component={ReadOnly}/>
+        <Route exact path='/' component={ReadOnly}/>
         <Route path='/readonly' component={ReadOnly}/>
         <Route path='/datachange' component={DataChange}/>
         <Route path='/ajax' component={Ajax}/>
