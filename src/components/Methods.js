@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ZingGrid from 'zinggrid';
 
 class Methods extends Component {
     constructor(props) {
@@ -16,9 +17,9 @@ class Methods extends Component {
         selected: 0
       }
       
-      this.cInput;
-      this.grid;
-      this.textarea;
+      this.cInput = null;
+      this.grid = null;
+      this.textarea = null;
       
   
       this.setPager = this.setPager.bind(this);

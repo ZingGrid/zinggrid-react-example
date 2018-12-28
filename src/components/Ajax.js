@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './css/Ajax.css';
+import ZingGrid from 'zinggrid';
 
 class Ajax extends Component {
     constructor(props) {
@@ -10,21 +12,31 @@ class Ajax extends Component {
     
     render() {
       return (
-        <zing-grid ref={(grid) => { this.grid = grid }} editor data={this.state.json}></zing-grid>
+        <div>
+          <zing-grid ref={(grid) => { this.grid = grid }} data={this.state.json} 
+            caption="Shows" 
+            editor
+            loading>
+          </zing-grid>
+        </div>
       )
     }
 
     componentDidMount() {
-        fetch('./shows.json')
-          .then(res => res.json())
-          .then(
-            (result) => {
+      const _this = this;
+      fetch('./shows.json')
+        .then(res => res.json())
+        .then(
+          (result) => {
+            // purposely timeout so the loading screen displays longer
+            setTimeout(() => {
               this.setState({
                 json: JSON.stringify(result.shows)
               })
-            },
-            (error) => { console.log(error)}
-          )
+            }, 2000);
+          },
+          (error) => { console.log(error)}
+        )
     }
 
   }

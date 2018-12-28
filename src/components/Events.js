@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import ZingGrid from 'zinggrid';
 
 class Events extends Component {
     constructor(props) {
         super(props);
-        this.grid; this.eventLog; this.eventText = "";
-
+        this.grid = null; 
+        this.eventLog = null; 
+        this.eventText = "";
     }
+    
     render() {
       return (
         <div>
