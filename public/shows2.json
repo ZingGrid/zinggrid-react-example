@@ -1,0 +1,30 @@
+{
+    "shows": [
+      {
+        "titleChanged": "New Girl",
+        "genreChanged": "Fantasy, Serial drama"
+      },
+      {
+        "titleChanged": "Sex Education",
+        "genreChanged": "Sci-Fi, Psychological thriller"
+      },
+      {
+        "titleChanged": "Rick and Morty",
+        "genreChanged": "Animated sitcom, Sci-Fi"
+      },
+      { "titleChanged": "Westworld", "genreChanged": "Sci-Fi, Drama" },
+      {
+        "titleChanged": "Robot Chicken",
+        "genreChanged": "Sci-Fi, Supernatural"
+      },
+      {
+        "titleChanged": "Family Guy",
+        "genreChanged": "Horror, Drama"
+      },
+      {
+        "titleChanged": "Simpsons",
+        "genreChanged": "Sitcom, Romantic Comedy"
+      }
+    ]
+  }
+  
