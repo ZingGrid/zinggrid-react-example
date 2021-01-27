@@ -1,0 +1,40 @@
+# overall CI pipeline name
+name: deploy
+
+# always run local unit tests except on master branch
+on: 
+  push:
+    branches:
+      - master
+
+# jobs are the different pipelines
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.15.1]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      # npm ci REQUIRES a package-lock.json 
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build js and modules
+        run: npm run build
+      - name: Deploy page
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          destination_dir: ./
+          keep_files: false
+  
