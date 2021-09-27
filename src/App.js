@@ -7,6 +7,7 @@ import Ajax from './components/Ajax';
 import Methods from './components/Methods';
 import Events from './components/Events';
 import ConditionalRendering from './components/ConditionalRendering';
+import RegisterMethod from './components/Registermethod';
 import { Switch, Route, Link } from 'react-router-dom';
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
             <Link to="/one-way-binding">One-Way Binding</Link>
             <Link to="/two-way-binding">Two-Way Binding</Link>
             <Link to="/conditional-rendering">Conditional Rendering</Link>
+            <Link to="/register-method">Register Method</Link>
             <Link to="/ajax">Ajax</Link>
             <Link to="/methods">Methods</Link>
             <Link to="/events">Events</Link>
@@ -28,6 +30,7 @@ class App extends Component {
         <Route path='/one-way-binding' component={OneWayBinding}/>
         <Route path='/two-way-binding' component={TwoWayBinding}/>
         <Route path='/conditional-rendering' component={ConditionalRendering}/>
+        <Route path='/register-method' component={RegisterMethod}/>
         <Route path='/ajax' component={Ajax}/>
         <Route path='/methods' component={Methods}/>
         <Route path='/events' component={Events}/>
